@@ -8,6 +8,12 @@ public class MazeSpawner : MonoBehaviour
     public Cell CellPrefab;
     public Vector3 CellSize = new Vector3(1,1,0);
     public ExitRenderer ExitRenderer;
+    public GameObject healPill;
+    public GameObject pathPill;
+    public GameObject trapPill;
+    public int HealsCount = 25;
+    public int PathsCount = 5;
+    public int TrapCount = 2;
 
     public Maze maze; 
 
@@ -26,8 +32,44 @@ public class MazeSpawner : MonoBehaviour
                 c.WallBottom.SetActive(maze.cells[x, y].WallBottom);
             }
         }
-
-        ExitRenderer.DrawExit();
+        InstantiateHeal();
+        InstantiatePath();
+        InstantiateTrap();
+        //ExitRenderer.DrawExit();
     }
 
+    private void InstantiateHeal()
+    {
+        for(int i = 0; i < HealsCount; i++)
+        {
+            Vector2Int position = maze.pills[i];
+            GameObject pill = Instantiate(healPill, new Vector3((position.x + 0.5f)*CellSize.x, 0.3f* CellSize.x, (position.y + 0.5f)*CellSize.x), Quaternion.identity);
+
+        }
+    }
+
+    private void InstantiatePath()
+    {
+        for (int i = HealsCount; i < HealsCount+PathsCount; i++)
+        {
+            Vector2Int position = maze.pills[i];
+            GameObject pill = Instantiate(pathPill, new Vector3((position.x + 0.5f) * CellSize.x, 0.3f * CellSize.x, (position.y + 0.5f) * CellSize.x), Quaternion.identity);
+
+        }
+    }
+
+    private void InstantiateTrap()
+    {
+        for (int i = HealsCount + PathsCount; i < HealsCount + PathsCount + TrapCount; i++)
+        {
+            Vector2Int position = maze.pills[i];
+            GameObject pill = Instantiate(trapPill, new Vector3((position.x + 0.5f) * CellSize.x, 0.3f * CellSize.x, (position.y + 0.5f) * CellSize.x), Quaternion.identity);
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        ExitRenderer.DrawExit();
+    }
 }

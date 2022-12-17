@@ -9,6 +9,9 @@ public class MazeGenerator
 {
     public int Width = 23;
     public int Height = 15;
+    public int HealsCount = 25;
+    public int PathsCount = 5;
+    public int TrapCount = 2;
 
     public Maze GenerateMaze() //создаем лабиринт
     {
@@ -39,6 +42,8 @@ public class MazeGenerator
 
         maze.cells = cells;
         maze.finishPosition = PlaceMazeExit(cells);
+
+        maze.pills = PillsGenerate();
 
         return maze;
     }
@@ -120,4 +125,17 @@ public class MazeGenerator
 
         return new Vector2Int(furthest.X, furthest.Y);
     }
+
+    private List<Vector2Int> PillsGenerate()
+    {
+        List<Vector2Int> pillsLoc = new List<Vector2Int>();
+        for (int i = 0; i < HealsCount+PathsCount+TrapCount; i++)
+        {
+            int xP = Random.Range(0, Width - 1);
+            int yP = Random.Range(0, Height - 1);
+            pillsLoc.Add(new Vector2Int(xP, yP));
+        }
+        return pillsLoc;
+    }
 }
+

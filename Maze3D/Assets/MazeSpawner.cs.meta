@@ -3,7 +3,12 @@ guid: 5fbac6a49d4f84d94ac5526782a6e6cc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - CellPrefab: {instanceID: 0}
+  - ExitRenderer: {instanceID: 0}
+  - healPill: {fileID: 1277557259597691946, guid: b4d83caf0de6cb3429f8cf8132a0ef9e, type: 3}
+  - pathPill: {instanceID: 0}
+  - trapPill: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
