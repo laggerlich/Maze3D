@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{F417D238-0CAB-D962-70EA-AA2442819875}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MazeSpawner.cs">
+    <Files>
+      <File FileName="Assets/MazeSpawner.cs" Line="41" Column="9" />
+      <File FileName="Assets/ExitRenderer.cs" Line="10" Column="60" />
+      <File FileName="Assets/Maze.cs" Line="1" Column="1" />
+      <File FileName="Assets/MazeGenerator.cs" Line="142" Column="43" />
+      <File FileName="Assets/PillsCollector.cs" Line="26" Column="10" />
+      <File FileName="Assets/ChangeScene.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Maze3D" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="MazeSpawner.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="Maze3D" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f74765d9-94c7-48c8-a45a-1f78e3056228" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
