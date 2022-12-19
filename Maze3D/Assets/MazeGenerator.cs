@@ -13,6 +13,9 @@ public class MazeGenerator
     public int PathsCount = 5;
     public int TrapCount = 2;
 
+    private int xF;
+    private int yF;
+
     public Maze GenerateMaze() //создаем лабиринт
     {
         MazeGeneratorCell[,] cells = new MazeGeneratorCell[Width, Height];
@@ -123,6 +126,9 @@ public class MazeGenerator
         else if (furthest.X == Width - 2) maze[furthest.X + 1, furthest.Y].WallLeft = false;
         else if (furthest.Y == Height - 2) maze[furthest.X, furthest.Y+1].WallBottom = false;
 
+        xF = furthest.X;
+        yF = furthest.Y;
+
         return new Vector2Int(furthest.X, furthest.Y);
     }
 
@@ -135,6 +141,7 @@ public class MazeGenerator
             int yP = Random.Range(0, Height - 1);
             pillsLoc.Add(new Vector2Int(xP, yP));
         }
+        pillsLoc.Add(new Vector2Int(xF, yF));
         return pillsLoc;
     }
 }

@@ -7,7 +7,7 @@ public class ExitRenderer : MonoBehaviour
 {
     public MazeSpawner MazeSpawner;
 
-    private LineRenderer componentLineRenderer;
+    public static LineRenderer componentLineRenderer { get; set; }
 
     private void Start()
     {
@@ -59,5 +59,6 @@ public class ExitRenderer : MonoBehaviour
         positions.Add(Vector3.zero);
         componentLineRenderer.positionCount = positions.Count;
         componentLineRenderer.SetPositions(positions.ToArray());
+        componentLineRenderer.gameObject.SetActive(false);
     }
 }

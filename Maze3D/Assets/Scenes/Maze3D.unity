@@ -698,9 +698,11 @@ MonoBehaviour:
   healPill: {fileID: 1277557259597691946, guid: b4d83caf0de6cb3429f8cf8132a0ef9e, type: 3}
   pathPill: {fileID: 1277557259597691946, guid: 9170dc0c05ade4deaaad862dbbbb6d18, type: 3}
   trapPill: {fileID: 1277557259597691946, guid: e1bfb08577abc4d65827e404062eadb6, type: 3}
-  HealsCount: 25
-  PathsCount: 3
-  TrapCount: 1
+  endPill: {fileID: 1277557259597691946, guid: 42b7716a3382245d496287fff0bea417, type: 3}
+  healsCount: 25
+  pathsCount: 5
+  trapCount: 2
+  endCount: 2
 --- !u!4 &1237027752
 Transform:
   m_ObjectHideFlags: 0

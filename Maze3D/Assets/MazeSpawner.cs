@@ -11,9 +11,11 @@ public class MazeSpawner : MonoBehaviour
     public GameObject healPill;
     public GameObject pathPill;
     public GameObject trapPill;
-    public int HealsCount = 25;
-    public int PathsCount = 5;
-    public int TrapCount = 2;
+    public GameObject endPill;
+    public int healsCount = 25;
+    public int pathsCount = 5;
+    public int trapCount = 2;
+    public int endCount = 2;
 
     public Maze maze; 
 
@@ -35,12 +37,13 @@ public class MazeSpawner : MonoBehaviour
         InstantiateHeal();
         InstantiatePath();
         InstantiateTrap();
+        InstantiateEnd();
         ExitRenderer.DrawExit();
     }
 
     private void InstantiateHeal()
     {
-        for(int i = 0; i < HealsCount; i++)
+        for(int i = 0; i < healsCount; i++)
         {
             Vector2Int position = maze.pills[i];
             GameObject pill = Instantiate(healPill, new Vector3((position.x + 0.5f)*CellSize.x, 0.3f* CellSize.x, (position.y + 0.5f)*CellSize.x), Quaternion.identity);
@@ -50,7 +53,7 @@ public class MazeSpawner : MonoBehaviour
 
     private void InstantiatePath()
     {
-        for (int i = HealsCount; i < HealsCount+PathsCount; i++)
+        for (int i = healsCount; i < healsCount+pathsCount; i++)
         {
             Vector2Int position = maze.pills[i];
             GameObject pill = Instantiate(pathPill, new Vector3((position.x + 0.5f) * CellSize.x, 0.3f * CellSize.x, (position.y + 0.5f) * CellSize.x), Quaternion.identity);
@@ -60,10 +63,19 @@ public class MazeSpawner : MonoBehaviour
 
     private void InstantiateTrap()
     {
-        for (int i = HealsCount + PathsCount; i < HealsCount + PathsCount + TrapCount; i++)
+        for (int i = healsCount + pathsCount; i < healsCount + pathsCount + trapCount; i++)
         {
             Vector2Int position = maze.pills[i];
             GameObject pill = Instantiate(trapPill, new Vector3((position.x + 0.5f) * CellSize.x, 0.3f * CellSize.x, (position.y + 0.5f) * CellSize.x), Quaternion.identity);
+
+        }
+    }
+    private void InstantiateEnd()
+    {
+        for (int i = healsCount + pathsCount + trapCount; i < healsCount + pathsCount + trapCount + 1; i++)
+        {
+            Vector2Int position = maze.pills[i];
+            GameObject pill = Instantiate(endPill, new Vector3((position.x + 0.5f) * CellSize.x, 0.3f * CellSize.x, (position.y + 0.5f) * CellSize.x), Quaternion.identity);
 
         }
     }

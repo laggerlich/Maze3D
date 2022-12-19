@@ -57,10 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/MazeSpawner.cs" />
+    <Compile Include="Assets/showPath.cs" />
     <Compile Include="Assets/Maze.cs" />
     <Compile Include="Assets/CameraTrack.cs" />
     <Compile Include="Assets/Cell.cs" />
-    <Compile Include="Assets/PlayerControls.cs" />
     <Compile Include="Assets/TrapTeleport.cs" />
     <Compile Include="Assets/MazeGenerator.cs" />
     <Compile Include="Assets/PlayerControls3D.cs" />
