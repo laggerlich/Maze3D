@@ -15,7 +15,7 @@ public class MazeSpawner : MonoBehaviour
     public int healsCount = 25;
     public int pathsCount = 5;
     public int trapCount = 2;
-    public int endCount = 2;
+    private int endCount = 1;
 
     public Maze maze; 
 

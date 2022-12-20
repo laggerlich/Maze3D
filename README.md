@@ -12,4 +12,6 @@ Game aim:
 
 >To find an exit from a maze (or from depression?..)
 
-[Our GDD](https://docs.google.com/document/d/1RA8-nHMvmb9nDdlwQcZuzsYJNoB_QZErK0BjwZ7IIO8/edit)
+>[Our GDD](https://docs.google.com/document/d/1RA8-nHMvmb9nDdlwQcZuzsYJNoB_QZErK0BjwZ7IIO8/edit)
+
+>[Game Build (PC)](https://drive.google.com/file/d/16NRg5Dw6GVkefU7xyIYF-rkK4oHb-PLT/view)
